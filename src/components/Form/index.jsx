@@ -43,6 +43,9 @@ render() {
         className="Form-notes-input"
         onChange={e => this.onTitleChanged(e)}
       />
+      <p className="Form-directions-text">
+        <em>Please type your note below </em>📋
+      </p>
       <textarea
         className={this.state.isLimit ?
         'Form-limit-error Form-notes-area' : 'Form-notes-area'}
@@ -50,10 +53,21 @@ render() {
         onChange={e => this.onTextChanged(e)
      }
       />
-      <button
-        onClick={() => this.props.onSave(this.props.id, this.state.text, this.state.title)}
-      >Submit
-      </button>
+      <div className="Form-details-container">
+        <div>
+          <button
+            className="Form-save"
+            onClick={() => this.props.onSave(this.props.id, this.state.text, this.state.title)}
+          >
+              Save
+          </button>
+        </div>
+
+        <div className="Form-char-count">
+          {this.props.limit - this.state.text.length} chars
+        </div>
+      </div>
+
     </div>
   );
 }

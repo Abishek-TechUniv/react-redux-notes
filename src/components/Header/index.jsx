@@ -22,9 +22,9 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-  title: 'Title',
-  lang: 'en',
-  titleText: 'New Note',
+  title: '',
+  lang: '',
+  titleText: '',
 };
 
 export default Header;

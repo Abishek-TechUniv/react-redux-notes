@@ -9,14 +9,15 @@ import Footer from '../Footer';
 import History from '../History';
 import Form from '../Form';
 
+import './App.css';
 
 const App = ({ page, currentNote, switchPage }) => {
   switch (page) {
     case 'new': return (
-      <div>
-        <Header />
+      <div className="App-container">
+        <Header titleText="New Note" title="Note Title" lang="en" />
         <Form
-          limit={10}
+          limit={140}
           note={{ title: '', text: '' }}
           changePage={() => switchPage('history', currentNote)}
         />
@@ -24,10 +25,10 @@ const App = ({ page, currentNote, switchPage }) => {
       </div>
     );
     case 'edit': return (
-      <div>
-        <Header />
+      <div className="App-container">
+        <Header titleText="Edit Note" title="Note Title" lang="en" />
         <Form
-          limit={10}
+          limit={140}
           note={currentNote}
           changePage={() => switchPage('history', currentNote)}
         />
@@ -35,10 +36,10 @@ const App = ({ page, currentNote, switchPage }) => {
       </div>
     );
     default: return (
-      <div>
-        <Header />
+      <div className="App-container">
+        <Header titleText="All Notes" title="" lang="" />
         <History />
-        <Footer />
+        <Footer footerText="New Note" />
       </div>
     );
   }

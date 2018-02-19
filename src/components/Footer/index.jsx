@@ -1,11 +1,13 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
+import { connect } from 'react-redux';
+import { changePage } from '../../redux/actions/navigation';
 import './Footer.css';
 
-const Footer = ({ onClick, footerText }) => (
+const Footer = ({ onSave, footerText }) => (
   <footer>
     <div className="Footer-container">
-      <button className="Footer-button" onClick={onClick()} >
+      <button className="Footer-button" onClick={onSave} >
         {footerText}
       </button>
     </div>
@@ -14,12 +16,17 @@ const Footer = ({ onClick, footerText }) => (
 
 Footer.defaultProps = {
   footerText: 'About Us',
-  onClick: () => global.console.log('unhandled footer button'),
+  onSave: () => global.console.log('unhandled footer button'),
 };
 
 Footer.propTypes = {
   footerText: PropTypes.string,
-  onClick: PropTypes.func,
+  onSave: PropTypes.func,
 };
 
-export default Footer;
+const mapDispatchToProps = dispatch => ({
+  onSave: (() => {
+    dispatch(changePage('new', undefined));
+  }),
+});
+export default connect(null, mapDispatchToProps)(Footer);

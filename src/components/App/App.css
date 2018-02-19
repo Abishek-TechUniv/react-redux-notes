@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+}
+
+#root {
+  width: 100vw;
+}
+
+.App {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(233,233,239);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.App-container {
+  height: 90vh;
+}
