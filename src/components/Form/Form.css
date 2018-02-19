@@ -1,0 +1,57 @@
+.Form-container {
+  height: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-content: space-around
+}
+
+.Form-notes-input {
+  font-size: 1em;
+  margin: 0 5% 0 5%;
+  width: 90%;
+  height: 3em;
+  border: none;
+}
+
+.Form-directions-text {
+  padding-left: 5%;
+  max-width: 50%;
+  align-self: flex-start
+}
+
+.Form-limit-error {
+  color: rgb(245, 122, 118);
+}
+
+.Form-details-container {
+  padding: 5%;
+  width: 90%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+
+.Form-char-count {
+  font-family: sans-serif;
+  text-align: right;
+}
+
+.Form-notes-area {
+  height: 50vh;
+  resize: none;
+  font-size: 1.5em;
+  flex-grow: 1;
+  width: 90%;
+  align-self: center;
+  margin: 0 5% 0 5%;
+  border-color: none;
+}
+
+.Form-save {
+  background-color: rgb(233,233,239);
+  border: none;
+  border-radius: 4px;
+  font-size: 1.5em;
+  font-weight: bold;
+}

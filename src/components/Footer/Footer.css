@@ -1,0 +1,15 @@
+.Footer-container {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-flow: row;
+}
+
+.Footer-button{
+  border-radius: 0;
+  background-color: white;
+  height: 3em;
+  flex-grow: 1;
+  width: 100vw;
+  font-size: 20px;
+}
