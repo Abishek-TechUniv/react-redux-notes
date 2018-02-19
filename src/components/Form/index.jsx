@@ -59,6 +59,7 @@ render() {
 }
 }
 Form.propTypes = {
+  id: PropTypes.string,
   title: PropTypes.string,
   text: PropTypes.string,
   onSave: PropTypes.func,
@@ -66,9 +67,10 @@ Form.propTypes = {
 };
 
 Form.defaultProps = {
+  id: '',
   title: '',
   text: '',
-  onSave: () => console.log('implement this'),
+  onSave: () => global.console.log('implement this'),
 };
 
 

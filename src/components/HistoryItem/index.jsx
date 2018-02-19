@@ -10,10 +10,13 @@ const HistoryItem = ({
   id, note, title, editNote,
 }) => (
   <div className="HistoryItem-container">
-    <div className="HistoryItem-title">{title}</div>
+    <div className="HistoryItem-title">
+      {title}
+    </div>
     <div
       className="HistoryItem-text"
       onClick={() => editNote({ id, note, title })}
+      role="presentation"
     >
       {note}
     </div>
@@ -23,10 +26,11 @@ const HistoryItem = ({
 HistoryItem.defaultProps = {
   note: 'Lorem ipsum deloret set ami',
   title: 'Default Title',
-  editNote: () => console.log('implement editing'),
+  editNote: () => global.console.log('implement editing'),
 };
 
 HistoryItem.propTypes = {
+  id: PropTypes.string.isRequired,
   editNote: PropTypes.func,
   note: PropTypes.string,
   title: PropTypes.string,

@@ -22,6 +22,11 @@ const History = ({ notesArr, onSave }) => {
     </div>);
 };
 
+History.propTypes = {
+  notesArr: PropTypes.arrayOf(PropTypes.object).isRequired,
+  onSave: PropTypes.func.isRequired,
+};
+
 const mapStateToProps = state => ({
   notesArr: state.notes.notesArr,
 });

@@ -14,7 +14,7 @@ const Footer = ({ onClick, footerText }) => (
 
 Footer.defaultProps = {
   footerText: 'About Us',
-  onClick: () => console.log('unhandled footer button'),
+  onClick: () => global.console.log('unhandled footer button'),
 };
 
 Footer.propTypes = {
