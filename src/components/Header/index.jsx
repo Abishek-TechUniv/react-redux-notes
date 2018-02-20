@@ -5,7 +5,7 @@ import './Header.css';
 
 
 const Header = ({ title, lang, titleText }) => (
-  <header>
+  <div>
     <div className="Title-header">
       {titleText}
     </div>
@@ -13,7 +13,7 @@ const Header = ({ title, lang, titleText }) => (
       <div className="Header-title">{title}</div>
       <div ><button className="Header-lang">{lang}</button></div>
     </div>
-  </header>);
+  </div>);
 
 Header.propTypes = {
   title: PropTypes.string,

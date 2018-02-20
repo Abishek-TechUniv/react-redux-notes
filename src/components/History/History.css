@@ -1,8 +1,23 @@
 .History-section {
+  flex-grow: 1;
   overflow: scroll;
   white-space: nowrap;
   word-wrap: wrap;
   height: 80vh;
   display: flex;
   flex-flow: column;
+}
+
+.History-sync-icon {
+  height: auto;
+  width: auto;
+  align-self: center;
+}
+
+.History-sync-icon:hover {
+    -webkit-filter: invert(100%) !important;
+}
+
+.History-sync-icon:active {
+  -webkit-filter: invert(50%) !important;
 }

@@ -35,7 +35,7 @@ onTextChanged = (e) => {
 
 render() {
   return (
-    <div>
+    <div className="Form-container">
       <input
         type="text"
         placeholder="Enter text"

@@ -5,13 +5,11 @@ import { changePage } from '../../redux/actions/navigation';
 import './Footer.css';
 
 const Footer = ({ onSave, footerText }) => (
-  <footer>
-    <div className="Footer-container">
-      <button className="Footer-button" onClick={onSave} >
-        {footerText}
-      </button>
-    </div>
-  </footer>
+  <div className="Footer-container">
+    <button className="Footer-button" onClick={onSave} >
+      {footerText}
+    </button>
+  </div>
 );
 
 Footer.defaultProps = {
