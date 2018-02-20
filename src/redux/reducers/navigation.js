@@ -1,7 +1,7 @@
 import { CHANGE_PAGE } from '../actions/navigation';
 
 const defaultState = {
-  page: 'new',
+  page: 'history',
   currentNote: {
     id: '',
     title: '',

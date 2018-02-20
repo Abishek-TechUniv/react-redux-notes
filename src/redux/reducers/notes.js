@@ -1,4 +1,6 @@
 import { CREATE_NOTE } from '../actions/notes';
+import { GET_NOTES } from '../actions/sync';
+
 import Note from '../../models/Notes';
 
 const defaultState = {
@@ -31,6 +33,12 @@ const notes = (prevState = defaultState, action) => {
         }),
       };
 
+    case GET_NOTES: {
+      return {
+        ...prevState,
+        notesArr: action.payload,
+      };
+    }
     default:
       return prevState;
   }
