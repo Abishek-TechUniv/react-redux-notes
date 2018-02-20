@@ -1,5 +1,6 @@
+import axios from 'axios';
 import { CREATE_NOTE } from '../actions/notes';
-import { GET_NOTES } from '../actions/sync';
+import { GET_NOTES, PUT_NOTES } from '../actions/sync';
 
 import Note from '../../models/Notes';
 
@@ -38,6 +39,15 @@ const notes = (prevState = defaultState, action) => {
         ...prevState,
         notesArr: action.payload,
       };
+    }
+    case PUT_NOTES: {
+      const options = {
+        url: '/notes',
+        method: 'PUT',
+        data: { notes: JSON.stringify(action.payload) },
+      };
+      axios(options);
+      return prevState;
     }
     default:
       return prevState;
